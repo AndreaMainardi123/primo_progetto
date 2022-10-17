@@ -16,3 +16,4 @@ def if_else_elif(request):
     }
 
     return render(request,"if_else_elif.html",context)
+    
