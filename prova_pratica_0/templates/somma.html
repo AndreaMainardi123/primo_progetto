@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somma</title>
+</head>
+<body>
+
+    <b>x = {{ x }}</b> <br/>
+    <b>y = {{ y }}</b> <br/>
+    
+    {% if x < y %}
+        <p><i>{{y}} è verde </i></p>
+        <p><i>{{x}} è rosso </i></p>
+    {% endif %}
+
+    {% elif x > y %}
+    <p><i>{{x}} è verde </i></p>
+    <p><i>{{y}} è rosso </i></p>
+    {% endif %}
+
+    {% else x == y %}
+    <p><i>{{x}} e {{y}} sono neri </i></p>
+    {% endif %}
+</body>
+</html>
