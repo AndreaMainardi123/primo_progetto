@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} {{ block.super }} | variabili {% endblock title %}
+{% block content %}  
+    
+
+<h1>Materie:</h1>
+   
+<ol>
+    <li>{% for key, value in data.items() %}
+        <tr>
+            <td> {{ Giuseppe Gullo }}: </td> <td> {{  }} </td>
+        </tr>
+    {% endfor %}</li>
+   
+</ol>
+    {% endblock content %}
