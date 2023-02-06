@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} {{ block.super }} | variabili {% endblock title %}
+{% block content %}  
+    
+<h1>Noleggi</h1>
+<ul>
+    {%for targa valutazione in noleggi.items%}
+        <li> {{targa}} </li> 
+       
+        <ul> {%for targa valutazione in noleggi.items%}
+            
+        </ul>
+    {% endfor %}
+
+</ul>
+    {% endblock content %}

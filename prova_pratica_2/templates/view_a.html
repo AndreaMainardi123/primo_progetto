@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} {{ block.super }} | variabili {% endblock title %}
+{% block content %}  
+    
+
+<ul>
+    {% for auto in auto %}
+        <li> {{auto}} </li>  
+    {% endfor %}
+
+</ul>
+    {% endblock content %}

@@ -1,13 +1,8 @@
 from django.urls import path
-from .views import view_a,view_b,view_c
-app_name="prova_pratica_1"
+from prova_pratica_2.views import view_a, view_b, view_c
+app_name="prova_pratica_2"
 urlpatterns=[
-    path('view_a',view_a,name='view_a'),
-    path('view_b',view_b,name='view_b'),
-    path('view_c',view_c,name='view_c'),
-   # path('lista',lista,name='lista'),
-   # path('chi_siamo',chi_siamo,name='chi_siamo'),
-   # path('variabili',variabili,name='variabili'),
-   # path('',index,name='index'),
-    
+    path('auto', view_a, name="auto"),
+    path('noleggi', view_b, name="noleggi"),
+    path('totale', view_c, name="totale"),
 ]
