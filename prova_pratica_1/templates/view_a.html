@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-{% block title %} {{ block.super}} | index2 {% endblock title %}
-{% block content %}
+{% block title %} {{ block.super }} | variabili {% endblock title %}
+{% block content %}  
     
-<h1>Elenco auto</h1>
-<ul>
-{% for auto in auto %}
-<li>{{auto}}</li>
-{% endfor %}
-</ul>
 
+<h1>Materie:</h1>
+<ol>
+    <li>{{var1}}</li>
+    <li>{{var2}}</li>
+    <li>{{var3}}</li>
+    <li>{{var4}}</li>
+    <li>{{var5}}</li>
+</ol>
 {% endblock content %}
