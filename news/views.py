@@ -49,3 +49,28 @@ class GiornalistaListView(ListView):
         context=super().get_context_data(**kwargs)
         context['giornalisti']=Giornalista.objects.all()
         return context
+
+
+def giornalisti_list_api(request):
+    giornalisti=Giornalista.objects.all()
+    data={'giornalisti':list(giornalisti.values("pk","nome","cognome"))}
+    response=JsonResponse(data)
+    return response
+
+def giornalisti_api(request, pk):
+    try:
+        giornalista=giornalista.object.get(pk=pk)
+        data={'giornalista':{
+            "nome":giornalista.nome,
+            "cognome":giornalista.cognome,
+            }
+        }
+        response=JsonResponse(data)
+    except Giornalista.DoesNotExist:
+        response=JsonResponse({
+            "error":{
+                "code":404,
+                "message":"Giornalista non trovato"
+            }}
+            ,status=404)
+    return response
