@@ -5,7 +5,9 @@
         <li><a href="/admin">admin</a></li>
         <li><a href="{% url 'prima_app:index' %}">prima_app</a></li>
         <li><a href="{% url 'seconda_app:es_if' %}">seconda_app</a></li>
-        <li><a href="{% url 'prova_pratica_1:view_a' %}">prova_pratica_1</a></li>
+        <li><a href="{% url 'prova_pratica_1:auto' %}">prova_pratica_1</a></li>
+        <li><a href="{% url 'news:articolo_detail' 1 %}">news</a></li>
+      
     </ol>
 
     {% endblock content %}

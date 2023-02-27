@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+homepage2
+{% endblock title %}
+{% block content %}
+<h3>Articoli</h3>
+    {% for articolo in articoli %}
+        <p><strong>Titolo: </strong>{{articolo.titolo}}</p>
+        <p><strong>Contetuto: </strong>{{articolo.contetuto}}</p>
+        <p><strong>Autore: </strong>{{articolo.autore}}</p>
+{% endfor %}
+<h4>Giornalisti:</h4>
+    {% for articolo in giornalisti %}
+        <p><strong>Nome: </strong>{{giornalisti.nome}}</p>
+        <p><strong>Cognome: </strong>{{giornalisti.cognome}}</p>
+        <hr>
+{% endfor %}
+
+{% endblock content %}
